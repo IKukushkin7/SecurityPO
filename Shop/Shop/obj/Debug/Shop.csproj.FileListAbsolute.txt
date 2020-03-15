@@ -1,0 +1,10 @@
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.csprojAssemblyReference.cache
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.Properties.Resources.resources
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.csproj.GenerateResource.cache
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.csproj.CoreCompileInputs.cache
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\bin\Debug\Shop.exe.config
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\bin\Debug\Shop.exe
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\bin\Debug\Shop.pdb
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.exe
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.pdb
+C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.MainForm.resources
