@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth.cs" />
     <Compile Include="CollectionHandlerEventArgs.cs" />
     <Compile Include="Food_product.cs" />
     <Compile Include="MainForm.cs">

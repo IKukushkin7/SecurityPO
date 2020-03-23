@@ -8,3 +8,13 @@ C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\bin\Debug\Sho
 C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.exe
 C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.pdb
 C:\Users\Денис\Desktop\Учеба\Защита ПО\Shop\Shop\obj\Debug\Shop.MainForm.resources
+C:\Program Files\Git\SecurityPO\Shop\Shop\bin\Debug\Shop.exe.config
+C:\Program Files\Git\SecurityPO\Shop\Shop\bin\Debug\Shop.exe
+C:\Program Files\Git\SecurityPO\Shop\Shop\bin\Debug\Shop.pdb
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.csprojAssemblyReference.cache
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.MainForm.resources
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.Properties.Resources.resources
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.csproj.GenerateResource.cache
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.csproj.CoreCompileInputs.cache
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.exe
+C:\Program Files\Git\SecurityPO\Shop\Shop\obj\Debug\Shop.pdb

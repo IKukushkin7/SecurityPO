@@ -25,12 +25,24 @@ namespace Shop
             shop.Name = "Магазин № 1";
         }
 
+        void VisibleMainForm()
+        {
+            MainField.Visible = true;
+            menuStrip1.Visible = true;
+            InSystem.Visible = false;
+            textBoxLogin.Visible = false;
+            textBoxPass.Visible = false;
+            labelLogin.Visible = false;
+            labelPass.Visible = false;
+            labelErorIn.Visible = false;
+
+        }
         private void OpenFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
                 MainField.Items.Clear();
-                string[] Shop_file = File.ReadAllLines("Магазин.txt");
+                string[] Shop_file = File.ReadAllLines("Shop.txt");
                 shop.Shop.Clear();
                 for (int i = 0; i < Shop_file.Length; i++)
                 {
@@ -80,7 +92,7 @@ namespace Shop
                 s[i] = p.Value.ToString();
                 i++;
             }
-            File.WriteAllLines("Магазин.txt", s);
+            File.WriteAllLines("Shop.txt", s);
         }
 
         private void FileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -110,7 +122,7 @@ namespace Shop
                 s[i] = p.ToString();
                 i++;
             }
-            File.WriteAllLines("Журнал.txt", s);
+            File.WriteAllLines("Journal.txt", s);
         }
 
         private void SellProductToolStripMenuItem_Click(object sender, EventArgs e)
@@ -171,8 +183,8 @@ namespace Shop
         {
             MainField.Items.Clear();
             j.list.Clear();
-            File.Delete("Журнал.txt");
-            File.Delete("Магазин.txt");
+            File.Delete("Journal.txt");
+            File.Delete("Shop.txt");
             shop.Shop.Clear();
         }
 
@@ -266,6 +278,45 @@ namespace Shop
             foreach (KeyValuePair<int, Product> p in shop.Shop)
             {
                 MainField.Items.Add(p.Value.ToString());
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void InSystem_Click(object sender, EventArgs e)
+        {
+            string path = @"Pass.txt";
+            string[] lines = new string[4];
+            int i = 0;
+            string line;
+            using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
+            {
+
+                while ((line = sr.ReadLine()) != null)
+                {
+                    lines[i] = line;
+                    i++;
+                }
+            }
+            if (textBoxLogin.Text == lines[0] & Auth.GetHash(textBoxPass.Text) == lines[1])
+            {
+                VisibleMainForm();
+            }
+            else
+            {
+                if (textBoxLogin.Text == lines[2] & Auth.GetHash(textBoxPass.Text) == lines[3])
+                {
+                    VisibleMainForm();
+                }
+                else
+                {
+                    textBoxLogin.Clear();
+                    textBoxPass.Clear();
+                    labelErorIn.Text = "Логин или пароль введены неверно!!!\n            Повторите попытку!!!";
+                }
             }
         }
     }

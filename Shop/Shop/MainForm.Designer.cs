@@ -51,6 +51,12 @@
             this.BookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainField = new System.Windows.Forms.ListBox();
+            this.InSystem = new System.Windows.Forms.Button();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
+            this.labelLogin = new System.Windows.Forms.Label();
+            this.labelPass = new System.Windows.Forms.Label();
+            this.labelErorIn = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,6 +75,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(935, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // FileToolStripMenuItem
             // 
@@ -169,7 +176,7 @@
             this.IndustrialToolStripMenuItem,
             this.BooksToolStripMenuItem});
             this.количествоToolStripMenuItem.Name = "количествоToolStripMenuItem";
-            this.количествоToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.количествоToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.количествоToolStripMenuItem.Text = "Количество";
             // 
             // CountOfFoodToolStripMenuItem
@@ -200,7 +207,7 @@
             this.IndustrialToolStripMenuItem1,
             this.BookToolStripMenuItem});
             this.выводТовараToolStripMenuItem.Name = "выводТовараToolStripMenuItem";
-            this.выводТовараToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выводТовараToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
             this.выводТовараToolStripMenuItem.Text = "Вывод товара";
             // 
             // FoodToolStripMenuItem1
@@ -234,16 +241,78 @@
             // MainField
             // 
             this.MainField.FormattingEnabled = true;
-            this.MainField.Location = new System.Drawing.Point(0, 27);
+            this.MainField.Location = new System.Drawing.Point(0, 23);
             this.MainField.Name = "MainField";
             this.MainField.Size = new System.Drawing.Size(935, 407);
             this.MainField.TabIndex = 1;
+            this.MainField.Visible = false;
+            // 
+            // InSystem
+            // 
+            this.InSystem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.InSystem.Location = new System.Drawing.Point(443, 245);
+            this.InSystem.Name = "InSystem";
+            this.InSystem.Size = new System.Drawing.Size(90, 34);
+            this.InSystem.TabIndex = 2;
+            this.InSystem.Text = "Вход";
+            this.InSystem.UseVisualStyleBackColor = true;
+            this.InSystem.Click += new System.EventHandler(this.InSystem_Click);
+            // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.Location = new System.Drawing.Point(414, 171);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(160, 20);
+            this.textBoxLogin.TabIndex = 3;
+            // 
+            // textBoxPass
+            // 
+            this.textBoxPass.Location = new System.Drawing.Point(414, 206);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.PasswordChar = '✱';
+            this.textBoxPass.Size = new System.Drawing.Size(160, 20);
+            this.textBoxPass.TabIndex = 4;
+            this.textBoxPass.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelLogin.Location = new System.Drawing.Point(351, 173);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(44, 18);
+            this.labelLogin.TabIndex = 5;
+            this.labelLogin.Text = "Login";
+            // 
+            // labelPass
+            // 
+            this.labelPass.AutoSize = true;
+            this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPass.Location = new System.Drawing.Point(333, 208);
+            this.labelPass.Name = "labelPass";
+            this.labelPass.Size = new System.Drawing.Size(75, 18);
+            this.labelPass.TabIndex = 6;
+            this.labelPass.Text = "Password";
+            // 
+            // labelErorIn
+            // 
+            this.labelErorIn.AutoSize = true;
+            this.labelErorIn.Location = new System.Drawing.Point(400, 134);
+            this.labelErorIn.Name = "labelErorIn";
+            this.labelErorIn.Size = new System.Drawing.Size(0, 13);
+            this.labelErorIn.TabIndex = 7;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 433);
+            this.Controls.Add(this.labelErorIn);
+            this.Controls.Add(this.labelPass);
+            this.Controls.Add(this.labelLogin);
+            this.Controls.Add(this.textBoxPass);
+            this.Controls.Add(this.textBoxLogin);
+            this.Controls.Add(this.InSystem);
             this.Controls.Add(this.MainField);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -282,6 +351,12 @@
         private System.Windows.Forms.ToolStripMenuItem FoodToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem IndustrialToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem BookToolStripMenuItem;
+        private System.Windows.Forms.Button InSystem;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPass;
+        private System.Windows.Forms.Label labelLogin;
+        private System.Windows.Forms.Label labelPass;
+        private System.Windows.Forms.Label labelErorIn;
     }
 }
 
