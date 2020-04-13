@@ -15,6 +15,7 @@ namespace Shop
     {
         MyNewCollection shop;
         Journal j;
+        bool Admin_in = false;
         public MainForm()
         {
             InitializeComponent();
@@ -30,12 +31,63 @@ namespace Shop
             MainField.Visible = true;
             menuStrip1.Visible = true;
             InSystem.Visible = false;
+            textBoxLogin.Clear();
+            textBoxPass.Clear();
             textBoxLogin.Visible = false;
             textBoxPass.Visible = false;
             labelLogin.Visible = false;
             labelPass.Visible = false;
+            labelErorIn.Text = "";
             labelErorIn.Visible = false;
 
+        }
+        void NonVisibleMainForm()
+        {
+            MainField.Visible = false;
+            menuStrip1.Visible = false;
+            InSystem.Visible = true;
+            textBoxLogin.Visible = true;
+            textBoxPass.Visible = true;
+            labelLogin.Visible = true;
+            labelPass.Visible = true;
+            labelErorIn.Visible = true;
+        }
+        void WriteLogIn()
+        {
+
+            string s = "";
+            DateTime date = DateTime.Now;
+            if (Admin_in == true)
+            {
+                s = String.Format("Вошёл:Admin Время:{0}", date);
+            }
+            else
+            {
+                s = String.Format("Вошёл:User Время:{0}", date);
+            }
+            using (var writer = new StreamWriter("Log_in_out.txt", true))
+            {
+                writer.WriteLine(s);
+            }
+        }
+        void WriteLogOut()
+        {
+            string s = "";
+            DateTime date = DateTime.Now;
+            if (Admin_in == true)
+            {
+                s = String.Format("Вышел:Admin Время:{0}", date);
+            }
+            else
+            {
+                s = String.Format("Вышел:User Время:{0}", date);
+            }
+            using (var writer = new StreamWriter("Log_in_out.txt", true))
+            {
+                //Добавляем к старому содержимому файла
+                writer.WriteLine(s);
+                writer.WriteLine("**********************************");
+            }
         }
         private void OpenFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -304,12 +356,15 @@ namespace Shop
             if (textBoxLogin.Text == lines[0] & Auth.GetHash(textBoxPass.Text) == lines[1])
             {
                 VisibleMainForm();
+                Admin_in = true;
+                WriteLogIn();
             }
             else
             {
                 if (textBoxLogin.Text == lines[2] & Auth.GetHash(textBoxPass.Text) == lines[3])
                 {
                     VisibleMainForm();
+                    WriteLogIn();
                 }
                 else
                 {
@@ -318,6 +373,12 @@ namespace Shop
                     labelErorIn.Text = "Логин или пароль введены неверно!!!\n            Повторите попытку!!!";
                 }
             }
+        }
+
+        private void OutSystemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WriteLogOut();
+            NonVisibleMainForm();
         }
     }
 }

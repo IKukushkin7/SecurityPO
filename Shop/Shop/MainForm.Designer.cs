@@ -50,6 +50,7 @@
             this.IndustrialToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.BookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ClearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OutSystemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainField = new System.Windows.Forms.ListBox();
             this.InSystem = new System.Windows.Forms.Button();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
@@ -69,7 +70,8 @@
             this.SellProdToolStripMenuItem,
             this.DeleteToolStripMenuItem,
             this.запросыToolStripMenuItem,
-            this.ClearToolStripMenuItem});
+            this.ClearToolStripMenuItem,
+            this.OutSystemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(935, 24);
@@ -238,6 +240,13 @@
             this.ClearToolStripMenuItem.Text = "Очистить";
             this.ClearToolStripMenuItem.Click += new System.EventHandler(this.ClearMainFieldToolStripMenuItem_Click);
             // 
+            // OutSystemToolStripMenuItem
+            // 
+            this.OutSystemToolStripMenuItem.Name = "OutSystemToolStripMenuItem";
+            this.OutSystemToolStripMenuItem.Size = new System.Drawing.Size(119, 20);
+            this.OutSystemToolStripMenuItem.Text = "Выход из системы";
+            this.OutSystemToolStripMenuItem.Click += new System.EventHandler(this.OutSystemToolStripMenuItem_Click);
+            // 
             // MainField
             // 
             this.MainField.FormattingEnabled = true;
@@ -357,6 +366,7 @@
         private System.Windows.Forms.Label labelLogin;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.Label labelErorIn;
+        private System.Windows.Forms.ToolStripMenuItem OutSystemToolStripMenuItem;
     }
 }
 
